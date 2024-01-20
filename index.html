@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prodigy</title>
+    <link rel="stylesheet" href="./CSS/index/style.css" />
+    <link rel="stylesheet" href="./CSS/nav/nav.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="" href="PRODIGY22 SITE CODE\Resources\Images\favicon.png">
+   </head>
+
+  <body>
+    <section class="hero-section">
+      <div class="navigation">
+        <nav>
+          <div class="logo">
+            <div class="img-container">
+              <img src="./Resources/Images/JGI-logo.png" alt="" />
+            </div>
+          </div>
+
+          <div class="logo-2">
+            <div class="img-container">
+              <img src="./Resources/Images/BCA-logo.png" alt="" />
+            </div>
+          </div>
+
+          <!-- <div class="nav-item-container" style="    justify-content: flex-end;">
+
+                    <div class="nav-items v-nav">
+                        <ul>
+
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Gear</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+          <!-- <div class="burger" onclick="burgerClick()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div> -->
+        </nav>
+      </div>
+      <div class="video-container">
+        <video src="./Resources/Video/bg vedio 3.mp4"
+          loop
+          muted
+          autoplay
+        class="mobile">
+   
+      
+      </video>
+
+      <video
+      src="./Resources/Video/BGVEDIO.mp4"
+      loop
+      muted
+      autoplay
+    class="desktop">
+  
+  </video>
+      </div>
+      <div class="content">
+      
+        <a class="button" href="./Posts.html">EXPLORE</a>
+      </div>
+      <p style="color: white;" id="Timer" class="timer"></p>
+
+    </section>
+  </body>
+  <script src="./JS/nav.js"></script>
+  <script>
+    function burgerClick() {
+      h_nav = document.querySelector(".navigation");
+      h_nav.classList.toggle("home-nav");
+    }
+  </script>
+
+  <script src="./JS/counter.js"></script>
+  
+</html>

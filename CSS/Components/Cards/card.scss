@@ -1,0 +1,114 @@
+.card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    align-content: center;
+    justify-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 2em;
+    row-gap: 4em;
+    .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 300px;
+        height: 400px;
+        transform-style: preserve-3d;
+        overflow: hidden;
+        transition: ease 0.3s;
+        border-radius: 12px;
+        // border-radius: 1em;
+        animation-name: card-animate;
+        animation-duration: 1s;
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            overflow: hidden;
+            box-shadow: 1px 1px 16px 8px rgba(0, 0, 0, 0.418);
+
+            .img-container {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 120%;
+                    height: 100%;
+                    transform: scale(1);
+                    transition: ease 0.5s;
+                }
+                img:hover {
+                    transform: scale(1.1);
+                    transition: ease 0.5s;
+                }
+            }
+
+            .overlay {
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.801);
+                width: 100%;
+                height: 70px;
+                bottom: 0;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: center;
+                h3 {
+                    color: white;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    letter-spacing: 3px;
+                    margin-left: 15px;
+                }
+                p {
+                    margin-left: 15px;
+                    color: white;
+                    font-size: 10px;
+                    font-weight: 350;
+                }
+            }
+        }
+    }
+
+    .card-container:hover {
+        transform: scale(1.1);
+        transition: ease 0.3s;
+    }
+}
+
+@keyframes card-animate {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 1198px) {
+    .card-container {
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .card-wrapper  {
+        grid-template-columns: 1fr 1fr;
+
+        margin-top: 5em;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .card-wrapper  {
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 0em;
+    }
+}
